@@ -1,0 +1,187 @@
+/* Resetting some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Navigation Styles */
+  .navbar {
+    background-color: #0563bb;
+    padding: 15px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar-toggler {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #e81f1f !important;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    background: url("path/to/your-hero-image.jpg") top center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .btn-primary {
+    background-color: #e81f1f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b23131;
+  }
+  
+  /* Services Section Styles */
+  .services {
+    padding: 80px 0;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #173b6c;
+    margin-bottom: 40px;
+  }
+  
+  .service {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .service h1 {
+    font-size: 1.5rem;
+  }
+  
+  .service span {
+    color: #555;
+  }
+  
+  /* About Section Styles */
+  .about {
+    padding: 80px 0;
+    color: #333;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+  }
+  
+  .about .content p {
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Section Styles */
+  .contact {
+    padding: 80px 0;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #0563bb;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  /* Scroll to Top Button Styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .square-button {
+    width: 50px;
+    height: 50px;
+    background-color: #1e82ee;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .square-button:hover {
+    background-color: #0056b3;
+  }
+  
