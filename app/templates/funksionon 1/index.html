@@ -1,0 +1,342 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xhamia Qendrore - Fushe Kosove</title>
+  <meta content="Mire se erdhe ne web faqen e Xhamise Qendrore ne Fushe Kosove , Ketu mund te gjeni te informacione mbi Imamin , ligjeratat , njoftimet dhe tafin e xhamise ." name="description">
+  <meta content="xhamia qendrore, fushe kosove, xhamia qendrore fushe, xhamia qendrore fushe kosove , jasir krasniqi , xhami , Islami , xhami fushe kosove , fushe kosove " name="keywords">
+  <meta name="author" content="Xhamia Qendrore Fushe Kosove">
+  <!-- Bootstrap CSS -->
+  <link rel="shortcut icon" href="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" type="image/x-icon">
+  <link href="{% static 'assets/img/Xhami_logo.png' %}" rel="icon">
+  <link href="{% static 'assets/img/Xhami_logo.png' %}" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'assets\css\style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-light navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% static 'assets\img\Xhami_logo.png' %}">
+      <img src="{% static 'assets\img\Xhami_logo.png' %}" alt="Avatar Logo" style="width:45px;" class="rounded-pill">
+    </a>
+
+    <div class="mx-4 " style=" width: 500px;">
+      <h2 class=" text-dark" style="font-size: x-large;">Xhamia Qendrore Fushe Kosove</h2>
+    </div>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="{% url 'kontakti' %}">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <!-- Header Background Image  -->
+  </section><!-- End Hero -->
+  
+  <section class="heroone" style="position: absolute; top: 60%; left: 0%;">
+    <div class="header">
+      <a href="{% url 'kontakti' %}"><h1 style="color: black; z-index: 20;">Xhamia Qendrore - Fushe Kosove</h1></a>
+      <p><span class="typed" data-typed-items="Jasir Krasniqi"></span></p>
+    </div>
+  </section>
+  
+  <section id="services" class="py-5 notifications ">
+    <div class="container">
+      <h2>Njoftime - Jasir Krasniqi</h2>
+      <div class="row" id="serviceContainer">
+
+    {% for item in data %}
+        <div class="col-md-4">
+            <h1 style="color: black;">{{ item.Titulli }}</h1>
+            <span>{{ item.Data }}</span>
+            <br>
+            <p>{{ item.Teksti|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+
+  
+
+        {% load embed_video_tags %}
+        {% video sportpost.video '368x315' %}
+
+
+      
+      <!-- <button id="showMoreButtontext" class="btn btn-primary">Shfaq më shumë</button> -->
+      <button id="showMoreButtontext" type="button" class="btn btn-outline-primary">Shfaq më shumë</button>
+    </div>
+  </section>
+
+  
+<!-- Services Section -->
+<section id="services" class="py-5 videos">
+  <div class="container">
+    <h2>Video - Jasir Krasniqi</h2>
+    <div class="row" id="serviceContainer">
+      <div class="col-md-4">
+        <h1 style="color: black;">48| Suretu El Fet-h | Hoxhë Mr Jasir Krasniqi |سورة الفتح الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/ex1FbKbeheo?si=p-TBUBuDiFLSRMiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div class="col-md-4">
+        <h1 style="color: black;">49 | Suretu El Huxhurat | Hoxhë Mr Jasir Krasniqi |سورة الحجرات الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=GCisVXLa5jRa3cKT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      {% for video in videos %}
+      <div class="col-md-4">
+        <h1 style="color: black;">{{ video.Emri }}</h1>
+        <br>
+        <span>{{ video.Data }}</span>
+        
+    {% with video_id=video.Video_Youtube|slice:'-11:' %}
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
+    {% endwith %}
+  </div>
+{% endfor %}
+
+
+{% for video in video_lasts %}
+<div class="col-md-4 hidden">
+  <h1 style="color: black;">{{ video.Emri }}</h1>
+  <br>
+  <span>{{ video.Data }}</span>
+  
+{% with video_id=video.Video_Youtube|slice:'-11:' %}
+  <iframe width="350" height="215" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
+{% endwith %}
+</div>
+{% endfor %}
+
+
+      <div class="col-md-4 hidden">
+        <h1 style="color: black;">51 | Suretu EDh Dharijat | Hoxhë Mr Jasir Krasniqi |سورة الذاريات الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/8iL7VyXeOKQ?si=6G1x77W0Imhjb2kj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+      </div>
+      <div class="col-md-4 hidden">
+        <h1 style="color: black;">52 | Suretu Et Tur | Hoxhë Mr Jasir Krasniqi |سورة الطور الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/nMiXTqYGtJU?si=3ApFNU8iAOtfpCLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+      </div>
+      <div class="col-md-4 hidden">
+        <h1 style="color: black;">53 | Suretu En Nexhm | Hoxhë Mr Jasir Krasniqi |سورة النجم الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=C1V6XVVNqJ3DAeWu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+      </div>
+      <div class="col-md-4 hidden">
+        <h1 style="color: black;">54 | Suretu El Kamer | Hoxhë Mr Jasir Krasniqi |سورة القمر الشيخ ياسركراسنتشي</h1>
+        <span>Data: 19 Tetor 2023</span>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=u934lQqWNIL3zPXe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+      </div>
+    </div>
+    <button id="showMoreButton" type="button" class="btn btn-outline-primary">Shfaq më shumë</button>
+  </div>
+</section>
+
+
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+          <div class="container">
+    
+            <div class="section-title">
+              <h2>Rreth Hoxhes</h2>
+              <p></p>
+            </div>
+
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h1 class="card-title">MSc. Jasir Krasniqi</h1>
+                    <p class="fst-italic">
+                      Mr. Jasir Krasniqi është kryeimam në xhaminë qëndrore në komunën e Fushë Kosovës,Masterin e përfundoi në Universiteti Islamik Botëror-Jordan/Amman, dega: Tefsir dhe shkenca të Kur'anit. Shkollimin Bachelor e përfundoi në Universiteti Islamik në Medine-dega:Bazat e Fesë dhe thirrjes Islame , dhe shkollimin e mesem e përfundoi në Medreseja e Mesme Alauddin - Prishtinë (1999 - 2003) .
+                    </p>
+                    <p class="fst-italic">
+                      Pervojë Pune : Muezin dhe zëvendës imam në Xhamin El-Bejan dhe El-Hidajeh në qytetin e Ammanit të Jordanis nga periudha 2011-2015.Imam,Hatib dhe Mualim nga viti 2016-2017 në fshatin MEsbardh komuna Fushë Kosovë. -Nga 2017 e tutje , Imam,Hatib dhe Mualim në Xhamia Qendrore Fushë Kosovë.                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+  
+    
+          </div>
+        </section><!-- End About Section -->
+  
+  <!-- About Section -->
+  <section id="about" class="py-5 about">
+    <div class="container">
+      <h2>Rreth Xhamise</h2>
+      <p>Xhamia Qendrore ne Fushe Kosove ka nje veprimtari qe nga viti "2013", prej asaj kohe deri me tani ...</p>
+    </div>
+  </section>
+
+  <!-- <div class="scroll-to-top">
+    <a href="#header" class="square-button">
+      <i class="fas fa-arrow-up">A</i>
+    </a>
+  </div> -->
+  
+  <section>
+    <div class="container">
+      <h3 class="text-dark" style="color: black;">Lokacioni: </h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d617.03884376708!2d21.0909025875451!3d42.637023730179685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135362012a955555%3A0x560ab6f40223c8c2!2sXhamia%20FUSHE%20KOSOVE!5e0!3m2!1sen!2s!4v1707342991652!5m2!1sen!2s" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>  
+  </section>
+
+
+
+ 
+
+  <!-- Footer -->
+  <footer class="bg-light text-white py-4">
+    <div class="container">
+      <p class="mb-0 text-center">&copy; 2024 Xhamia Qendrore Fushe Kosove. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const showMoreButton = document.getElementById("showMoreButton");
+  const hiddenDivs = document.querySelectorAll(".hidden");
+  let isShowingAll = false;
+
+  // Add a click event listener to the button
+  showMoreButton.addEventListener("click", function () {
+    hiddenDivs.forEach(function (div) {
+      if (isShowingAll) {
+        div.style.display = "none";
+      } else {
+        div.style.display = "block";
+      }
+    });
+
+    isShowingAll = !isShowingAll;
+    showMoreButton.textContent = isShowingAll ? "Shfaq më pak" : "Shfaq më shumë";
+  });
+});
+  </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+const showMoreButton = document.getElementById("showMoreButtontext");
+const hiddenDivs = document.querySelectorAll(".hiddentext");
+let isShowingAll = false;
+
+// Add a click event listener to the button
+showMoreButton.addEventListener("click", function () {
+  hiddenDivs.forEach(function (div) {
+    if (isShowingAll) {
+      div.style.display = "none";
+    } else {
+      div.style.display = "block";
+    }
+  });
+
+  isShowingAll = !isShowingAll;
+  showMoreButton.textContent = isShowingAll ? "Shfaq më pak" : "Shfaq më shumë";
+});
+});
+</script>
+  
+  
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var options = {
+        strings: ["MSc.Jasir Krasniqi"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        startDelay: 1000,
+        loop: true
+      };
+  
+      var typed = new Typed(".typed", options);
+    });
+  </script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileNavToggle = document.getElementById("mobileNavToggle");
+    const mobileNavMenu = document.getElementById("mobileNavMenu");
+
+    // Add a click event listener to the mobile menu button
+    mobileNavToggle.addEventListener("click", function () {
+      if (mobileNavMenu.style.display === "none" || mobileNavMenu.style.display === "") {
+        mobileNavMenu.style.display = "block";
+      } else {
+        mobileNavMenu.style.display = "none";
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default jump-to behavior
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }
+      });
+    });
+  });
+</script>
+<script src="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script src="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/jquery-3.7.1.min.js"></script>
+
+</body>
+
+</html>

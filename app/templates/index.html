@@ -1,342 +1,817 @@
-{% load static %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xhamia Qendrore - Fushe Kosove</title>
-  <meta content="Mire se erdhe ne web faqen e Xhamise Qendrore ne Fushe Kosove , Ketu mund te gjeni te informacione mbi Imamin , ligjeratat , njoftimet dhe tafin e xhamise ." name="description">
-  <meta content="xhamia qendrore, fushe kosove, xhamia qendrore fushe, xhamia qendrore fushe kosove , jasir krasniqi , xhami , Islami , xhami fushe kosove , fushe kosove " name="keywords">
-  <meta name="author" content="Xhamia Qendrore Fushe Kosove">
-  <!-- Bootstrap CSS -->
-  <link rel="shortcut icon" href="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" type="image/x-icon">
-  <link href="{% static 'assets/img/Xhami_logo.png' %}" rel="icon">
-  <link href="{% static 'assets/img/Xhami_logo.png' %}" rel="apple-touch-icon">
+    <head>
+        <meta charset="utf-8">
+        <title>Xhamia Qendrore - Fushe Kosove</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{% static 'assets\css\style.css' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-</head>
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm bg-light navbar-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% static 'assets\img\Xhami_logo.png' %}">
-      <img src="{% static 'assets\img\Xhami_logo.png' %}" alt="Avatar Logo" style="width:45px;" class="rounded-pill">
-    </a>
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
-    <div class="mx-4 " style=" width: 500px;">
-      <h2 class=" text-dark" style="font-size: x-large;">Xhamia Qendrore Fushe Kosove</h2>
-    </div>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'kontakti' %}">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <!-- Template Stylesheet -->
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-
-
-
-
-
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <!-- Header Background Image  -->
-  </section><!-- End Hero -->
-  
-  <section class="heroone" style="position: absolute; top: 60%; left: 0%;">
-    <div class="header">
-      <a href="{% url 'kontakti' %}"><h1 style="color: black; z-index: 20;">Xhamia Qendrore - Fushe Kosove</h1></a>
-      <p><span class="typed" data-typed-items="Jasir Krasniqi"></span></p>
-    </div>
-  </section>
-  
-  <section id="services" class="py-5 notifications ">
-    <div class="container">
-      <h2>Njoftime - Jasir Krasniqi</h2>
-      <div class="row" id="serviceContainer">
-
-    {% for item in data %}
-        <div class="col-md-4">
-            <h1 style="color: black;">{{ item.Titulli }}</h1>
-            <span>{{ item.Data }}</span>
-            <br>
-            <p>{{ item.Teksti|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
-
-
-  
-
-        {% load embed_video_tags %}
-        {% video sportpost.video '368x315' %}
-
-
-      
-      <!-- <button id="showMoreButtontext" class="btn btn-primary">Shfaq më shumë</button> -->
-      <button id="showMoreButtontext" type="button" class="btn btn-outline-primary">Shfaq më shumë</button>
-    </div>
-  </section>
-
-  
-<!-- Services Section -->
-<section id="services" class="py-5 videos">
-  <div class="container">
-    <h2>Video - Jasir Krasniqi</h2>
-    <div class="row" id="serviceContainer">
-      <div class="col-md-4">
-        <h1 style="color: black;">48| Suretu El Fet-h | Hoxhë Mr Jasir Krasniqi |سورة الفتح الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/ex1FbKbeheo?si=p-TBUBuDiFLSRMiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-      <div class="col-md-4">
-        <h1 style="color: black;">49 | Suretu El Huxhurat | Hoxhë Mr Jasir Krasniqi |سورة الحجرات الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=GCisVXLa5jRa3cKT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-
-      {% for video in videos %}
-      <div class="col-md-4">
-        <h1 style="color: black;">{{ video.Emri }}</h1>
-        <br>
-        <span>{{ video.Data }}</span>
         
-    {% with video_id=video.Video_Youtube|slice:'-11:' %}
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
-    {% endwith %}
-  </div>
-{% endfor %}
+
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
 
 
-{% for video in video_lasts %}
-<div class="col-md-4 hidden">
-  <h1 style="color: black;">{{ video.Emri }}</h1>
-  <br>
-  <span>{{ video.Data }}</span>
-  
-{% with video_id=video.Video_Youtube|slice:'-11:' %}
-  <iframe width="350" height="215" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
-{% endwith %}
-</div>
-{% endfor %}
+        <!-- Topbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar d-none d-lg-block">
+                <div class="topbar-inner">
+                    <div class="row gx-0">
+                        <div class="col-lg-7 text-start">
 
-
-      <div class="col-md-4 hidden">
-        <h1 style="color: black;">51 | Suretu EDh Dharijat | Hoxhë Mr Jasir Krasniqi |سورة الذاريات الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/8iL7VyXeOKQ?si=6G1x77W0Imhjb2kj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
-      </div>
-      <div class="col-md-4 hidden">
-        <h1 style="color: black;">52 | Suretu Et Tur | Hoxhë Mr Jasir Krasniqi |سورة الطور الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/nMiXTqYGtJU?si=3ApFNU8iAOtfpCLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
-      </div>
-      <div class="col-md-4 hidden">
-        <h1 style="color: black;">53 | Suretu En Nexhm | Hoxhë Mr Jasir Krasniqi |سورة النجم الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=C1V6XVVNqJ3DAeWu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
-      </div>
-      <div class="col-md-4 hidden">
-        <h1 style="color: black;">54 | Suretu El Kamer | Hoxhë Mr Jasir Krasniqi |سورة القمر الشيخ ياسركراسنتشي</h1>
-        <span>Data: 19 Tetor 2023</span>
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/XolARRcBMhA?si=u934lQqWNIL3zPXe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
-      </div>
-    </div>
-    <button id="showMoreButton" type="button" class="btn btn-outline-primary">Shfaq më shumë</button>
-  </div>
-</section>
-
-
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-          <div class="container">
-    
-            <div class="section-title">
-              <h2>Rreth Hoxhes</h2>
-              <p></p>
-            </div>
-
-            <div class="card mb-3" >
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            <div class="h-100 d-inline-flex align-items-center">
+                                <span class="far fa-envelope me-2 text-dark"></span>
+                                <a href="#" class="text-secondary"><span>amarkrasniqi2019@gmail.com</span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-end">
+                            <div class="h-100 d-inline-flex align-items-center">
+                                <span class="text-body">Follow ne:</span>
+                                <a class="text-dark px-2" href="https://www.facebook.com/Xhamia.Fushe.Kosove"><i class="fab fa-facebook-f"></i></a>
+                                <a class="text-dark px-2" href="https://www.youtube.com/@jasirkrasniqi8366"><i class="fab fa-youtube"></i></a>
+                                <a class="text-dark px-2" href="https://www.instagram.com/jasirkrasniqi/"><i class="fab fa-instagram"></i></a>
+                                <!-- <a class="text-body ps-4" href=""><i class="fa fa-lock text-dark me-1"></i> Signup/login</a> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h1 class="card-title">MSc. Jasir Krasniqi</h1>
-                    <p class="fst-italic">
-                      Mr. Jasir Krasniqi është kryeimam në xhaminë qëndrore në komunën e Fushë Kosovës,Masterin e përfundoi në Universiteti Islamik Botëror-Jordan/Amman, dega: Tefsir dhe shkenca të Kur'anit. Shkollimin Bachelor e përfundoi në Universiteti Islamik në Medine-dega:Bazat e Fesë dhe thirrjes Islame , dhe shkollimin e mesem e përfundoi në Medreseja e Mesme Alauddin - Prishtinë (1999 - 2003) .
-                    </p>
-                    <p class="fst-italic">
-                      Pervojë Pune : Muezin dhe zëvendës imam në Xhamin El-Bejan dhe El-Hidajeh në qytetin e Ammanit të Jordanis nga periudha 2011-2015.Imam,Hatib dhe Mualim nga viti 2016-2017 në fshatin MEsbardh komuna Fushë Kosovë. -Nga 2017 e tutje , Imam,Hatib dhe Mualim në Xhamia Qendrore Fushë Kosovë.                    </p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
             </div>
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-3">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="mb-0">Xhamia<span class="text-primary"> Qendrore</span> </h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav ms-lg-auto mx-xl-auto">
+                            <a href="index.html" class="nav-item nav-link active">Faqja</a>
+                            <a href="about.html" class="nav-item nav-link">Rreth ne</a>
+                            <a href="activity.html" class="nav-item nav-link">Aktivitetet</a>
+                            <a href="event.html" class="nav-item nav-link">Eventet</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu m-0 rounded-0">
+                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
+                                    <a href="team.html" class="dropdown-item">Our Team</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">Donate</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Topbar End -->
 
-  
-    
-          </div>
-        </section><!-- End About Section -->
-  
-  <!-- About Section -->
-  <section id="about" class="py-5 about">
-    <div class="container">
-      <h2>Rreth Xhamise</h2>
-      <p>Xhamia Qendrore ne Fushe Kosove ka nje veprimtari qe nga viti "2013", prej asaj kohe deri me tani ...</p>
-    </div>
-  </section>
-
-  <!-- <div class="scroll-to-top">
-    <a href="#header" class="square-button">
-      <i class="fas fa-arrow-up">A</i>
-    </a>
-  </div> -->
-  
-  <section>
-    <div class="container">
-      <h3 class="text-dark" style="color: black;">Lokacioni: </h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d617.03884376708!2d21.0909025875451!3d42.637023730179685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135362012a955555%3A0x560ab6f40223c8c2!2sXhamia%20FUSHE%20KOSOVE!5e0!3m2!1sen!2s!4v1707342991652!5m2!1sen!2s" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>  
-  </section>
-
-
-
- 
-
-  <!-- Footer -->
-  <footer class="bg-light text-white py-4">
-    <div class="container">
-      <p class="mb-0 text-center">&copy; 2024 Xhamia Qendrore Fushe Kosove. All rights reserved.</p>
-    </div>
-  </footer>
-  
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const showMoreButton = document.getElementById("showMoreButton");
-  const hiddenDivs = document.querySelectorAll(".hidden");
-  let isShowingAll = false;
-
-  // Add a click event listener to the button
-  showMoreButton.addEventListener("click", function () {
-    hiddenDivs.forEach(function (div) {
-      if (isShowingAll) {
-        div.style.display = "none";
-      } else {
-        div.style.display = "block";
-      }
-    });
-
-    isShowingAll = !isShowingAll;
-    showMoreButton.textContent = isShowingAll ? "Shfaq më pak" : "Shfaq më shumë";
-  });
-});
-  </script>
+        <!-- Hero Start -->
+        <div class="container-fluid hero-header">
+            <div class="container">
+                <marquee style="z-index: 999; font-size: 20px; " class="text-dark"  behavior="scroll" direction="left">Urime Festa e Kurban Bajramit</marquee>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="hero-header-inner animated zoomIn">
+                            <p class="fs-4 text-dark">I dërguari i Allahut ﷺ ka thënë: </p>
+                            <!-- <p class="fs-4 text-dark">Mirë se vini në faqen e Xhamis Qëndrore</p> -->
+                            <!-- <h1 class="display-1 mb-5 text-dark">Purity Comes From Faith</h1> -->
+                            <h1 class="display-1 mb-5 text-dark fs-1">“Kush e beson Allahun dhe ditën e fundit, le te flasë mirë ose le të heshtë.”</h1>
+                            <a href="" class="btn btn-primary py-3 px-5">Lexo më shumë</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-const showMoreButton = document.getElementById("showMoreButtontext");
-const hiddenDivs = document.querySelectorAll(".hiddentext");
-let isShowingAll = false;
+        <!-- About Satrt -->
+        <div class="container-fluid about py-5">
+            <div class="container py-5">
+                <div class="row g-5 mb-5">
+                    <div class="col-xl-6">
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <img src="https://scontent.fprn4-1.fna.fbcdn.net/v/t39.30808-6/363817619_6403634709720588_6329650853852581881_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=3dSrFViZiOYAb5D4307&_nc_ht=scontent.fprn4-1.fna&oh=00_AfATk1oLj4_7N7L9f__KQmiRLjR8pJy1T6GGcjmoWIcyPw&oe=6617A92F" class="img-fluid h-100 w-700 wow zoomIn" data-wow-delay="0.1s" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://scontent.fprn4-1.fna.fbcdn.net/v/t39.30808-6/356895858_6301594819924578_4150515456757560574_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hXvFcTYJq3QAb4BG-R3&_nc_ht=scontent.fprn4-1.fna&oh=00_AfDRDJ4IwqByu3joKIvCYmsny1L05CRW0bTnkQOMBfIwcg&oe=6617A786" class="img-fluid pb-3 wow zoomIn" data-wow-delay="0.1s" alt="">
+                                <img src="https://scontent.fprn4-1.fna.fbcdn.net/v/t39.30808-6/435502546_3684926561789048_372922594012557496_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=NhV-fiDlsdsAb4792Bk&_nc_ht=scontent.fprn4-1.fna&oh=00_AfDvjB3PgW3Nmv11-XK3OowztrWZ9MGqYQ7fKg6IYPlrdw&oe=6617AF16" class="img-fluid pt-3 h-40 wow zoomIn" data-wow-delay="0.1s" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeIn" data-wow-delay="0.5s">
+                        <p class="fs-5 text-uppercase text-primary">Rreth Xhamise sone: </p>
+                        <h1 class="display-5 pb-4 m-0">"Allah-u Ndihmon Ata Qe Ndihmojne Veten e Tyre." <i style="font-size: medium;" >Surah Ar-Ra'd - (13-11)</i></h1>
+                        <p class="pb-4">MsC. Jasir Krasniqi është kryeimam në xhaminë qëndrore në komunën e Fushë Kosovës.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="ps-3 d-flex align-items-center justify-content-start">
+                                    <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-eye text-dark fa-4x mb-5 pb-2"></i></span>
+                                    <div class="ms-4">
+                                        <h5>Our Vision</h5>
+                                        <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ps-3 d-flex align-items-center justify-content-start">
+                                    <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-flag text-dark fa-4x mb-5 pb-2"></i></span>
+                                    <div class="ms-4">
+                                        <h5>Our Mission</h5>
+                                        <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>Bamirësi & Donacione</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Mesim Kurani</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>Edukim per femije</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Hadithe & Sunete </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-2">
+                            <i class="fa fa-mosque fa-5x text-white"></i>
+                        </div>
+                        <div class="col-lg-7 text-center text-lg-start">
+                            <h1 class="mb-0">Nje Ajet apo Hadith nese eshte nevoja vendos ketu</h1>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="" class="btn btn-light py-2 px-4">Burimi i Ajetit apo Hadithit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        <!-- Activities Start -->
+        <!-- 
+        <div class="container-fluid activities py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <p class="fs-5 text-uppercase text-primary">Aktivitetet</p>
+                    <h1 class="display-3">Ketu mund te gjeni Aktivitetet tona</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                            <i class="fa fa-mosque fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Mosque Development</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                            <i class="fa fa-donate fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Charity & Donation</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-quran fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Quran Learning</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                            <i class="fa fa-book fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Hadith & Sunnah</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                            <i class="fa fa-book-open fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Parent Education</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-hands fa-4x text-dark"></i>
+                            <div class="ms-4">
+                                <h4>Help Orphans</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam.</p>
+                                <a href="" class="btn btn-primary px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Activities Start -->
 
-// Add a click event listener to the button
-showMoreButton.addEventListener("click", function () {
-  hiddenDivs.forEach(function (div) {
-    if (isShowingAll) {
-      div.style.display = "none";
-    } else {
-      div.style.display = "block";
-    }
-  });
 
-  isShowingAll = !isShowingAll;
-  showMoreButton.textContent = isShowingAll ? "Shfaq më pak" : "Shfaq më shumë";
-});
-});
-</script>
-  
-  
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var options = {
-        strings: ["MSc.Jasir Krasniqi"],
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000,
-        startDelay: 1000,
-        loop: true
-      };
-  
-      var typed = new Typed(".typed", options);
-    });
-  </script>
+        <!-- Events Start -->
+        <div class="container-fluid event py-5">
+            <div class="container py-5">
+                <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Upcoming <span class="text-primary">Events</span></h1>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Fri 06:55</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">Namazi i Kuraban Bajramit</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden mb-5">
+                            <img src="{% static 'assets/img/events-1.jpg' %}" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.3s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Wed 11:30</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">Sadak ....</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden  mb-5">
+                            <img src="https://scontent.fprn4-1.fna.fbcdn.net/v/t39.30808-6/435346063_3684992545115783_1882788457864082626_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VcG2gssEKRQAb6Ovf0a&_nc_ht=scontent.fprn4-1.fna&oh=00_AfAVSC0IuXP7m2zP_HyVbhTw3I07v5IH2cCIvOVu3oZywg&oe=6617978D" class="img-fluid w-50" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Thu 11:30</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">Namazi i Teravive</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden mb-5">
+                            <img src="https://i0.wp.com/sandzaklive.rs/wp-content/uploads/2023/12/ornamental-arabic-lantern-with-burning-candle-glowing-night-muslim-holy-month-ramadan-kareem.jpg?resize=780%2C470&ssl=1" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Events End -->
 
 
+        <!-- Sermon Start -->
+        <!-- <div class="container-fluid sermon py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <p class="fs-5 text-uppercase text-primary">Sermons</p>
+                    <h1 class="display-3">Join The Islamic Community</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="sermon-item wow fadeIn" data-wow-delay="0.1s">
+                            <div class="overflow-hidden p-4 pb-0">
+                                <img src="{% static 'assets/img/sermon-1.jpg' %}" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="sermon-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fa fa-calendar me-2 text-muted"></i><a href="" class="text-muted me-2">13 Nov 2023</small></a>
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted">Admin</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href="" class="me-1"><i class="fas fa-video text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-headphones text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-file-alt text-muted"></i></a>
+                                        <a href="" class=""><i class="fas fa-image text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">How to get closer to Allah</a>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-6 col-xl-4">
+                        <div class="sermon-item wow fadeIn" data-wow-delay="0.3s">
+                            <div class="overflow-hidden p-4 pb-0">
+                                <img src="{% static 'assets/img/sermon-2.jpg' %}" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="sermon-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fa fa-calendar me-2 text-muted"></i><a href="" class="text-muted me-2">13 Nov 2023</small></a>
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted">Admin</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href="" class="me-1"><i class="fas fa-video text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-headphones text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-file-alt text-muted"></i></a>
+                                        <a href="" class=""><i class="fas fa-image text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">Importance of Hajj in Islam</a>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-6 col-xl-4">
+                        <div class="sermon-item wow fadeIn" data-wow-delay="0.5s">
+                            <div class="overflow-hidden p-4 pb-0">
+                                <img src="{% static 'assets/img/sermon-3.jpg' %}" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="sermon-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fa fa-calendar me-2 text-muted"></i><a href="" class="text-muted me-2">13 Nov 2023</small></a>
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted">Admin</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href="" class="me-1"><i class="fas fa-video text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-headphones text-muted"></i></a>
+                                        <a href="" class="me-1"><i class="fas fa-file-alt text-muted"></i></a>
+                                        <a href="" class=""><i class="fas fa-image text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">Importance of “Piller” of Islam</a>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Sermon End -->
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const mobileNavToggle = document.getElementById("mobileNavToggle");
-    const mobileNavMenu = document.getElementById("mobileNavMenu");
 
-    // Add a click event listener to the mobile menu button
-    mobileNavToggle.addEventListener("click", function () {
-      if (mobileNavMenu.style.display === "none" || mobileNavMenu.style.display === "") {
-        mobileNavMenu.style.display = "block";
-      } else {
-        mobileNavMenu.style.display = "none";
-      }
-    });
-  });
-</script>
+        <!-- Blog Start -->
+        <!-- <div class="container-fluid py-5">
+            <div class="container py-5">
+                <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Latest From <span class="text-primary">Our Blog</span></h1>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="blog-item wow fadeIn" data-wow-delay="0.1s">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img src="{% static 'assets/img/blog-1.jpg' %}" class="img-fluid w-100" alt="">
+                                <div class="bg-primary d-inline px-3 py-2 text-center text-white position-absolute top-0 end-0">01 Jan 2045</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="blog-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted me-2">By Admin</small></a>
+                                        <small><i class="fa fa-comment-alt me-2 text-muted"></i><a href="" class="text-muted me-2">12 Comments</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href=""><i class="fas fa-bookmark text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">Importance of “Piller” of Islam</a>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                                <a href="#" class="btn btn-primary px-3">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="blog-item wow fadeIn" data-wow-delay="0.3s">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img src="{% static 'assets/img/blog-2.jpg' %}" class="img-fluid w-100" alt="">
+                                <div class="bg-primary d-inline px-3 py-2 text-center text-white position-absolute top-0 end-0">01 Jan 2045</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="blog-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted me-2">By Admin</small></a>
+                                        <small><i class="fa fa-comment-alt me-2 text-muted"></i><a href="" class="text-muted me-2">12 Comments</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href=""><i class="fas fa-bookmark text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">How to get closer to Allah</a>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                                <a href="#" class="btn btn-primary px-3">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-6 col-xl-4">
+                        <div class="blog-item wow fadeIn" data-wow-delay="0.5s">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img src="{% static 'assets/img/blog-3.jpg' %}" class="img-fluid w-100" alt="">
+                                <div class="bg-primary d-inline px-3 py-2 text-center text-white position-absolute top-0 end-0">01 Jan 2045</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="blog-meta d-flex justify-content-between pb-2">
+                                    <div class="">
+                                        <small><i class="fas fa-user me-2 text-muted"></i><a href="" class="text-muted me-2">By Admin</small></a>
+                                        <small><i class="fa fa-comment-alt me-2 text-muted"></i><a href="" class="text-muted me-2">12 Comments</small></a>
+                                    </div>
+                                    <div class="">
+                                        <a href=""><i class="fas fa-bookmark text-muted"></i></a>
+                                    </div>
+                                </div>
+                                <a href="" class="d-inline-block h4 lh-sm mb-3">Importance of Hajj in Islam</a>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                aliquip ex ea commodo consequat.</p>
+                                <a href="#" class="btn btn-primary px-3">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Blog End -->
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default jump-to behavior
+        <!-- Team Start -->
+        <div class="container-fluid team py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <p class="fs-5 text-uppercase text-primary">Ekipi </p>
+                    <h1 class="display-3">Njofotim mbi Ekipin </h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-4 col-xl-5">
+                        <div class="team-img wow zoomIn" data-wow-delay="0.1s">
+                            <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="team-item wow fadeIn" data-wow-delay="0.1s">
+                            <h1>Jasir Krasniqi</h1>
+                            <h5 class="fw-normal fst-italic text-primary mb-4">Imam </h5>
+                            <p class="mb-4"> 
+                                Mr. Jasir Krasniqi është kryeimam në xhaminë qëndrore në komunën e Fushë Kosovës,Masterin e përfundoi në Universiteti Islamik Botëror-Jordan/Amman, dega: Tefsir dhe shkenca të Kur'anit. Shkollimin Bachelor e përfundoi në Universiteti Islamik në Medine-dega:Bazat e Fesë dhe thirrjes Islame , dhe shkollimin e mesem e përfundoi në Medreseja e Mesme Alauddin - Prishtinë (1999 - 2003) .
+                                <br>
+                                Pervojë Pune : Muezin dhe zëvendës imam në Xhamin El-Bejan dhe El-Hidajeh në qytetin e Ammanit të Jordanis nga periudha 2011-2015.Imam,Hatib dhe Mualim nga viti 2016-2017 në fshatin MEsbardh komuna Fushë Kosovë. -Nga 2017 e tutje , Imam,Hatib dhe Mualim në Xhamia Qendrore Fushë Kosovë.
+                            
+                            </p>
+                            <div class="team-icon d-flex pb-4 mb-4 border-bottom border-primary">
+                                <a class="btn btn-primary btn-lg-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-lg-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg-square me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg-square"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="team-item wow zoomIn" data-wow-delay="0.2s">
+                                    <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid w-100" alt="">
+                                    <div class="team-content text-dark text-center py-3">
+                                        <div class="team-content-inner">
+                                            <h5 class="mb-0">Visari Mbiemri?</h5>
+                                            <p class="text-dark">Muezin</p>
+                                            <div class="team-icon d-flex align-items-center justify-content-center">
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square me-2"><i class="fab fa-instagram"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square"><i class="fab fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-item wow zoomIn" data-wow-delay="0.4s">
+                                    <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid w-100" alt="">
+                                    <div class="team-content text-dark text-center py-3">
+                                        <div class="team-content-inner">
+                                            <h5 class="mb-0">Fitim Mbiemri?</h5>
+                                            <p class="text-dark">Poziten nuk ja di !</p>
+                                            <div class="team-icon d-flex align-items-center justify-content-center">
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square me-2"><i class="fab fa-instagram"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square"><i class="fab fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-item wow zoomIn" data-wow-delay="0.6s">
+                                    <img src="{% static 'assets/img/Hoxhe-Jasir-Krasniqi.jpg' %}" class="img-fluid w-100" alt="">
+                                    <div class="team-content text-dark text-center py-3">
+                                        <div class="team-content-inner">
+                                            <h5 class="mb-0">Mirembajtesi i xhamise</h5>
+                                            <p class="text-dark">Vullnetar</p>
+                                            <div class="team-icon d-flex align-items-center justify-content-center">
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                                <a class="btn btn-primary btn-sm-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square me-2"><i class="fab fa-instagram"></i></a>
+                                                <a href="#" class="btn btn-primary btn-sm-square"><i class="fab fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
 
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-          });
-        }
-      });
-    });
-  });
-</script>
-<script src="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-<script src="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/jquery-3.7.1.min.js"></script>
+        <!-- Testiminial Start -->
+        <!-- <div class="container-fluid testimonial py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <p class="fs-5 text-uppercase text-primary">Testimonial</p>
+                    <h1 class="display-3">What People Say About Islam</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
+                    <div class="testimonial-item">
+                        <div class="d-flex mb-3">
+                            <div class="position-relative">
+                                <img src="{% static 'assets/img/testimonial-1.jpg' %}" class="img-fluid" alt="">
+                                <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                    <i class="fa fa-quote-left text-dark"></i>
+                                </div>
+                            </div>
+                            <div class="ps-3 my-auto ">
+                                <h5 class="mb-0">Full Name</h5>
+                                <p class="m-0">Profession</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="d-flex">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do tempor ut labore et dolore magna aliqua. Ut enim ad minim quis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="d-flex mb-3">
+                            <div class="position-relative">
+                                <img src="{% static 'assets/img/testimonial-2.jpg' %}" class="img-fluid" alt="">
+                                <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                    <i class="fa fa-quote-left text-dark"></i>
+                                </div>
+                            </div>
+                            <div class="ps-3 my-auto ">
+                                <h5 class="mb-0">Full Name</h5>
+                                <p class="m-0">Profession</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="d-flex">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do tempor ut labore et dolore magna aliqua. Ut enim ad minim quis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="d-flex mb-3">
+                            <div class="position-relative">
+                                <img src="{% static 'assets/img/testimonial-3.jpg' %}" class="img-fluid" alt="">
+                                <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                    <i class="fa fa-quote-left text-dark"></i>
+                                </div>
+                            </div>
+                            <div class="ps-3 my-auto ">
+                                <h5 class="mb-0">Full Name</h5>
+                                <p class="m-0">Profession</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="d-flex">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do tempor ut labore et dolore magna aliqua. Ut enim ad minim quis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="d-flex mb-3">
+                            <div class="position-relative">
+                                <img src="{% static 'assets/img/testimonial-4.jpg' %}" class="img-fluid" alt="">
+                                <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                    <i class="fa fa-quote-left text-dark"></i>
+                                </div>
+                            </div>
+                            <div class="ps-3 my-auto ">
+                                <h5 class="mb-0">Full Name</h5>
+                                <p class="m-0">Profession</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="d-flex">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do tempor ut labore et dolore magna aliqua. Ut enim ad minim quis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Testiminial End -->
 
-</body>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-lg-7">
+                        <!-- <h1 class="text-light mb-0">Subscribe our newsletter</h1> -->
+                        <!-- <p class="text-secondary">Get the latest news and other tips</p> -->
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="position-relative mx-auto">
+                            <!-- <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"> -->
+                            <!-- <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subcribe</button> -->
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="border-top border-secondary"></div>
+                    </div>
+                </div>
+                <div class="row g-4 footer-inner">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">Xhamia <span class="text-primary">Qendore</span></h4>
+                            <p class="mb-4 text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+                            <!-- <a href="" class="btn btn-primary py-2 px-4">Donate Now</a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">Xhamia</h4>
+                            <div class="d-flex flex-column">
+                                <h6 class="text-secondary mb-0">Adresa</h6>
+                                <div class="d-flex align-items-center border-bottom py-4">
+                                    <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"><i class="fa fa-map-marker-alt text-dark"></i></span>
+                                    <a href="" class="text-body">Fushe Kosove , Poshte rrethit </a>
+                                </div>
+                                <!-- <h6 class="text-secondary mt-4 mb-0">Our Mobile</h6>
+                                <div class="d-flex align-items-center py-4">
+                                    <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"><i class="fa fa-phone-alt text-dark"></i></span>
+                                    <a href="" class="text-body">+012 345 67890</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">Eksploro Faqen </h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Faqja</a>
+                                <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Rreth Nesh</a>
+                                <!-- <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Our Features</a> -->
+                                <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Kontakti</a>
+                                <!-- <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Our Blog</a> -->
+                                <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Eventet</a>
+                                <!-- <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Donations</a> -->
+                                <!-- <a class="text-body mb-2" href=""><i class="fa fa-check text-primary me-2"></i>Sermons</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">Postimet e fundit</h4>
+                            <div class="d-flex border-bottom border-secondary py-4">
+                                <img src="{% static 'assets/img/blog-mini-1.jpg' %}" class="img-fluid flex-shrink-0" alt="">
+                                <div class="ps-3">
+                                    <p class="mb-0 text-muted">01 Jan 2045</p>
+                                    <a href="" class="text-body">Lorem ipsum dolor sit amet elit eros vel</a>
+                                </div>
+                            </div>
+                            <div class="d-flex py-4">
+                                <img src="{% static 'assets/img/blog-mini-2.jpg' %}" class="img-fluid flex-shrink-0" alt="">
+                                <div class="ps-3">
+                                    <p class="mb-0 text-muted">01 Jan 2045</p>
+                                    <a href="" class="text-body">Lorem ipsum dolor sit amet elit eros vel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-4">
+                <div class="border-top border-secondary pb-4"></div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Xhamia Qendore</a>, Te gjitha te drejtat te rezervuara.
+                    </div>
+                    <div class="col-md-6 text-center text-dark  text-md-end">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        <!-- Designed By <a class="border-bottom  text-dark"  href="https://htmlcodex.com">HTML Codex</a> -->
+                        Designed By <a class="  text-dark"  href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'assets/lib/wow/wow.min.js' %}"></script>
+        <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
 
 </html>
