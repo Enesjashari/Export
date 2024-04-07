@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import PytjaForm  # Ensure the correct form is being imported
 from .models import *
-
+from django.contrib import messages
 
 from django.shortcuts import render, redirect
 from .forms import PytjaForm  # Import your PytjaForm here
@@ -9,13 +9,19 @@ from .forms import PytjaForm  # Import your PytjaForm here
 def kontakti_view(request):
     if request.method == 'POST':
         form = PytjaForm(request.POST)
-        if form.is_valid():
-            form.save()  # If this form is a ModelForm
+
+        emri = request.POST.get('emri',' ')
+        email = request.POST.get('email',' ')
+        teksti = request.POST.get('teksti',' ')
+        pytja = Pytje(EmriMbiemri=emri,Email = email , Pytja=teksti)
+        pytja.save()  # If this form is a ModelForm
+        messages.success(request, "Pytja u dergua me Sukses !")
+        # if form.is_valid():
+            # form.save()  # If this form is a ModelForm
             # Process valid form data here if needed
-            return redirect('index')  # Redirect to the 'index' page
-    else:
-        form = PytjaForm()
-    return render(request, 'index2.html', {'form': form})
+            # return redirect('index')  # Redirect to the 'index' page
+
+    return render(request, 'contact.html')
 
 
 

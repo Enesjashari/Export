@@ -6,6 +6,27 @@
     <head>
         <meta charset="utf-8">
         <title>Xhamia Qendrore - Fushe Kosove</title>
+        <link rel="icon" href="{% static 'assets/funksionon 1/img/Xhami_logo.png' %}" type="image/png">
+
+
+        <meta name="description" content="Xhamia Qendore Fushe Kosove , me Imam Jasir Krasniqi eshte ...">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://xhamiaqendrore.pythonanywhere.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Xhamia Qendrore - Fushe Kosove">
+        <meta property="og:description" content="Xhamia Qendore Fushe Kosove , me Imam Jasir Krasniqi eshte ...">
+        <meta property="og:image" content="{% static 'assets/funksionon 1/img/Xhami_logo.png' %}">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="xhamiaqendrore.pythonanywhere.com">
+        <meta property="twitter:url" content="https://xhamiaqendrore.pythonanywhere.com/">
+        <meta name="twitter:title" content="Xhamia Qendrore - Fushe Kosove">
+        <meta name="twitter:description" content="Xhamia Qendore Fushe Kosove , me Imam Jasir Krasniqi eshte ...">
+        <meta name="twitter:image" content="{% static 'assets/funksionon 1/img/Xhami_logo.png' %}">
+
+
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -29,6 +50,8 @@
         <!-- Template Stylesheet -->
         <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
+        <link href="{% static 'assets/css/fireworks.css' %}" rel="stylesheet">
+
         
 
     </head>
@@ -50,8 +73,8 @@
                         <div class="col-lg-7 text-start">
 
                             <div class="h-100 d-inline-flex align-items-center">
-                                <span class="far fa-envelope me-2 text-dark"></span>
-                                <a href="#" class="text-secondary"><span>amarkrasniqi2019@gmail.com</span></a>
+                                <!-- <span class="far fa-envelope me-2 text-dark"></span> -->
+                                <!-- <a href="#" class="text-secondary"><span>amarkrasniqi2019@gmail.com</span></a> -->
                             </div>
                         </div>
                         <div class="col-lg-5 text-end">
@@ -81,17 +104,17 @@
                             <a href="activity.html" class="nav-item nav-link">Aktivitetet</a>
                             <a href="event.html" class="nav-item nav-link">Eventet</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nderfaqet</a>
                                 <div class="dropdown-menu m-0 rounded-0">
-                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <a href="blog.html" class="dropdown-item">Se Shpejti </a>
+                                    <a href="team.html" class="dropdown-item">Se Shpejti </a>
+                                    <a href="testimonial.html" class="dropdown-item">Se Shpejti </a>
+                                    <a href="404.html" class="dropdown-item">Se Shpejti </a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="{% url 'kontakti' %}" class="nav-item nav-link">Kontakti</a>
                         </div>
-                        <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">Donate</a>
+                        <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">Lexo</a>
                     </div>
                 </nav>
             </div>
@@ -101,10 +124,13 @@
         <!-- Hero Start -->
         <div class="container-fluid hero-header">
             <div class="container">
-                <marquee style="z-index: 999; font-size: 20px; " class="text-dark"  behavior="scroll" direction="left">Urime Festa e Kurban Bajramit</marquee>
+                <marquee style="z-index: 999; font-size: 20px; " class="text-warning"  behavior="scroll" direction="left">Urime Festa e Fiter Bajramit !</marquee>
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="hero-header-inner animated zoomIn">
+                            <div style="z-index: 999;" class="firework"></div>
+                            <div style="z-index: 999;" class="firework"></div>
+                            <div style="z-index: 999;" class="firework"></div>
                             <p class="fs-4 text-dark">I dërguari i Allahut ﷺ ka thënë: </p>
                             <!-- <p class="fs-4 text-dark">Mirë se vini në faqen e Xhamis Qëndrore</p> -->
                             <!-- <h1 class="display-1 mb-5 text-dark">Purity Comes From Faith</h1> -->
@@ -116,6 +142,8 @@
             </div>
         </div>
         <!-- Hero End -->
+
+    
 
 
         <!-- About Satrt -->
@@ -138,7 +166,7 @@
                         <h1 class="display-5 pb-4 m-0">"Allah-u Ndihmon Ata Qe Ndihmojne Veten e Tyre." <i style="font-size: medium;" >Surah Ar-Ra'd - (13-11)</i></h1>
                         <p class="pb-4">MsC. Jasir Krasniqi është kryeimam në xhaminë qëndrore në komunën e Fushë Kosovës.</p>
                         <div class="row g-4 mb-4">
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <div class="ps-3 d-flex align-items-center justify-content-start">
                                     <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-eye text-dark fa-4x mb-5 pb-2"></i></span>
                                     <div class="ms-4">
@@ -152,10 +180,11 @@
                                     <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-flag text-dark fa-4x mb-5 pb-2"></i></span>
                                     <div class="ms-4">
                                         <h5>Our Mission</h5>
+                                        
                                         <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         
                         <div class="row g-2">
@@ -265,20 +294,20 @@
         <!-- Events Start -->
         <div class="container-fluid event py-5">
             <div class="container py-5">
-                <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Upcoming <span class="text-primary">Events</span></h1>
+                <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Eventet e <span class="text-primary">Xhamise</span></h1>
                 <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
                     <div class="col-3 col-lg-2 pe-0">
                         <div class="text-center border-bottom border-dark py-3 px-2">
-                            <h6>01 Jan 2045</h6>
-                            <p class="mb-0">Fri 06:55</p>
+                            <h6>7 Pril 2024</h6>
+                            <p class="mb-0">E Diele 13:07</p>
                         </div>
                     </div>
                     <div class="col-9 col-lg-6 border-start border-dark pb-5">
                         <div class="ms-3">
-                            <h4 class="mb-3">Namazi i Kuraban Bajramit</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
-                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                            <h4 class="mb-3">Namazi i Fiter Bajramit</h4>
+                            <p class="mb-4">Dita e pare e Fiter Bajramit , <b>e merkure, me 10 Prill 2024,</b> Namazi i Fiter Bajramrit falet ne ora <strong>6:41 min.</strong>
+                            Namazi i Sabahut do te falet para Namazit te Fiter Bajramit nga ora <strong>5:40.</strong> </p>
+                            <a href="#" class="btn btn-primary px-3">Shiko me Shume</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -290,16 +319,19 @@
                 <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.3s">
                     <div class="col-3 col-lg-2 pe-0">
                         <div class="text-center border-bottom border-dark py-3 px-2">
-                            <h6>01 Jan 2045</h6>
-                            <p class="mb-0">Wed 11:30</p>
+                            <h6>5 Pril 2024</h6>
+                            <p class="mb-0">E Premte 13:05</p>
                         </div>
                     </div>
                     <div class="col-9 col-lg-6 border-start border-dark pb-5">
                         <div class="ms-3">
-                            <h4 class="mb-3">Sadak ....</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
-                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                            <h4 class="mb-3">Sadakatul-fitrit</h4>
+                            <p class="mb-4">Sadakatul-fitri është bërë obligim në vitin e dytë të Hixhretit, 
+                                në të njëjtën kohë kur është bërë farz agjërimi i muajit të Ramazanit, pak kohë para se të ligjësohet
+                                 Zekati. <br>
+                                Ky obligim fetar mund te behet ne xhamine tone pas namazit te teravive . </p>
+
+                            <a href="https://bislame.net/sadakatul-fitri-dhe-dispozitat-sheriatike-te-tij" class="btn btn-primary px-3">Shiko me Shume</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -311,16 +343,20 @@
                 <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
                     <div class="col-3 col-lg-2 pe-0">
                         <div class="text-center border-bottom border-dark py-3 px-2">
-                            <h6>01 Jan 2045</h6>
-                            <p class="mb-0">Thu 11:30</p>
+                            <h6>08 Mars 2024</h6>
+                            <p class="mb-0">E Premte 12:30</p>
                         </div>
                     </div>
                     <div class="col-9 col-lg-6 border-start border-dark pb-5">
                         <div class="ms-3">
                             <h4 class="mb-3">Namazi i Teravive</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
-                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                            <p class="mb-4">
+                                Namazi i teravisë, është namaz që falet gjatë muajit të madhërishëm të ramazanit. Falet pas namazit 
+                                të jacisë dhe para vitrit. I takon grupit të namazeve nafile, por ky është synet i fortë – 
+                                muekede- si për meshkujt ashtu edhe për femrat. Koha e namazit të teravive është pas namazit
+                                 të jacisë dhe para namazit të vitrit deri para namazit të sabahut.Kete vit Namazi i teravive do te falet <strong>30 minuta</strong> pas hyrjes se kohes te Jacise. 
+                            </p>
+                            <a href="https://bislame.net/namazi-i-teravise/" class="btn btn-primary px-3">Shiko me</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -524,10 +560,9 @@
                             
                             </p>
                             <div class="team-icon d-flex pb-4 mb-4 border-bottom border-primary">
-                                <a class="btn btn-primary btn-lg-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-primary btn-lg-square me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="btn btn-primary btn-lg-square me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="btn btn-primary btn-lg-square"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-lg-square me-2" href="https://www.facebook.com/Xhamia.Fushe.Kosove"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-lg-square me-2" href="https://www.youtube.com/@jasirkrasniqi8366"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/jasirkrasniqi/" class="btn btn-primary btn-lg-square me-2"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="row g-4">
@@ -722,7 +757,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item mt-5">
                             <h4 class="text-light mb-4">Xhamia <span class="text-primary">Qendore</span></h4>
-                            <p class="mb-4 text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+                            <p class="mb-4 text-secondary">Kurdo qe koha vie per namaz , falu , per kete eshte xhamia (per ju) - <strong> Abu Kamil </strong> </p>
                             <!-- <a href="" class="btn btn-primary py-2 px-4">Donate Now</a> -->
                         </div>
                     </div>
@@ -733,7 +768,7 @@
                                 <h6 class="text-secondary mb-0">Adresa</h6>
                                 <div class="d-flex align-items-center border-bottom py-4">
                                     <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"><i class="fa fa-map-marker-alt text-dark"></i></span>
-                                    <a href="" class="text-body">Fushe Kosove , Poshte rrethit </a>
+                                    <a href="https://www.google.com/maps/place/%E2%80%9CCentral+Mosque%E2%80%9D+Fush%C3%AB+Kosov%C3%AB/@42.6371551,21.0880824,17z/data=!3m1!4b1!4m6!3m5!1s0x135362012a955555:0x560ab6f40223c8c2!8m2!3d42.6371512!4d21.0906573!16s%2Fg%2F11sscsgjzg?entry=ttu" class="text-body">Fushe Kosove , Poshte rrethit </a>
                                 </div>
                                 <!-- <h6 class="text-secondary mt-4 mb-0">Our Mobile</h6>
                                 <div class="d-flex align-items-center py-4">
@@ -764,15 +799,15 @@
                             <div class="d-flex border-bottom border-secondary py-4">
                                 <img src="{% static 'assets/img/blog-mini-1.jpg' %}" class="img-fluid flex-shrink-0" alt="">
                                 <div class="ps-3">
-                                    <p class="mb-0 text-muted">01 Jan 2045</p>
-                                    <a href="" class="text-body">Lorem ipsum dolor sit amet elit eros vel</a>
+                                    <p class="mb-0 text-muted">7 prill 2024</p>
+                                    <a href="" class="text-body">Dita e pare e Fiter Bajramit ....</a>
                                 </div>
                             </div>
                             <div class="d-flex py-4">
                                 <img src="{% static 'assets/img/blog-mini-2.jpg' %}" class="img-fluid flex-shrink-0" alt="">
                                 <div class="ps-3">
-                                    <p class="mb-0 text-muted">01 Jan 2045</p>
-                                    <a href="" class="text-body">Lorem ipsum dolor sit amet elit eros vel</a>
+                                    <p class="mb-0 text-muted">5 Prill 2024</p>
+                                    <a href="" class="text-body">Sadakatul-fitri është bërë obligim ....</a>
                                 </div>
                             </div>
                         </div>

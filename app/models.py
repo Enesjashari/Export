@@ -7,7 +7,7 @@ from embed_video.fields import EmbedVideoField
 import os
 class Pytje(models.Model):
     EmriMbiemri = models.CharField(max_length = 1000)
-    NumriTelefonit = models.CharField(max_length = 1000)
+    NumriTelefonit = models.CharField(max_length = 1000,blank=True,default=' ')
     Email = models.CharField(max_length = 1000)
     Pytja = models.TextField(max_length = 1000)
     Ju_kam_Pergjigjur = models.BooleanField(blank=True, default = False)

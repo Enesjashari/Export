@@ -472,7 +472,3 @@ h4, h5, h6, .h4, .h5, .h6 {
 .footer-item a i:hover {
     color: var(--bs-primary) !important;
 }
-/*** Footer End ***/
-body{
-    overflow-x: hidden;
-}
